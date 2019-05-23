@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>공기질 ㅍㅌㅊ?</h1>
+    <form method='POST' action='{%url "result"%}'>
+            시도명을 검색하세요
+        {% csrf_token %}
+        <input type='text' name='cityname'>
+        <button type='submit'> 검색!</button>
+    </form>
+        <p>검색 가능 시도명:서울, 부산, 대구, 인천, 광주, 대전, 울산, 경기, 강원, 충북, 충남, 전북, 전남, 경북, 경남, 제주, 세종</p>
+</body>
+</html>

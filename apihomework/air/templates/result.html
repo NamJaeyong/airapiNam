@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>대기 실시간 정보</h1>
+<ul>
+{% for air in air_list %}
+    <li>구:{{air.cityName}}</li>
+    <li>측정 시간:{{air.dataTime}}</li>
+    <li>산소포화도:{{air.so2Value}}</li>
+    <li>일산화탄소:{{air.coValue}}</li>
+    <li>이산화질소:{{air.no2Value}}</li>
+    <li>미세먼지:{{air.pm10Value}}</li>
+    <li>초미세먼지:{{air.pm25Value}}</li>
+    <p>---------------------------</p>
+{% endfor %}
+                
+</ul>
+</body>
+</html>
